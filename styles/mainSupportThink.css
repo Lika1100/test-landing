@@ -1,0 +1,161 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.main__sectionSupport {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__sectionSupport {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__section_padding {
+    padding-top: 64px;
+}
+
+.main__image {
+    padding-right: 44px;
+    object-position: 0 -25px;
+    transform: scale(1);
+}
+
+.main__title {
+    display: block;
+    text-transform: uppercase;
+    max-width: 764px;
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48.6px;
+}
+
+.main__title_colored {
+    font-weight: 700;
+    color: #F54932;
+}
+
+.main__title_size {
+    max-width: 704px;
+}
+
+.main__content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 60px;
+}
+
+.main__item:last-child {
+    border-bottom: none;
+}
+
+.main__item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 2px solid #D0D0D0;
+    font-size: 20px;
+    line-height: 24px;
+    height: 56px;
+}
+
+.main__item_left {
+    font-weight: 400;
+    border-right: 2px solid #D0D0D0;
+    opacity: 0.7;
+}
+
+.main__item_right {
+    font-weight: 600;
+    padding-left: 16px;
+}
+
+.main__item_cross {
+    text-decoration: line-through;
+	text-decoration-color: red;
+}
+
+.main__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #3057A2;
+    padding-top: 48px;
+}
+
+.main__sectionMobile {
+    display: none;
+}
+
+.main__contentMobile {
+    display: none;
+}
+
+
+@media screen and (max-width: 980px) {
+    .main__content {
+        display: none;
+    }
+
+    .main__section {
+        flex-direction: column;
+    }
+
+    .main__sectionSupport {
+        display: none;
+    }
+
+    .main__title {
+        font-size: 28px;
+        line-height: 37.8px;
+    }
+
+    .main__sectionImg {
+        padding-top: 24px;
+        max-width: 550px;
+        width: 100%;
+    }
+
+    .main__sectionMobile {
+        display: block;
+    }
+
+    .main__subtitle {
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+
+    .main__contentMobile {
+        display: flex;
+    }
+
+    .main__contentItems {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 44px;
+    }
+
+    .main__itemMobile {
+        border-bottom: 2px solid #D0D0D0;
+    }
+
+    .main__itemMobile:last-child {
+        border-color: transparent;
+    }
+
+    .main__item_colored {
+        opacity: 1;
+        font-weight: 600;
+    }
+}

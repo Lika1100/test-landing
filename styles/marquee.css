@@ -1,0 +1,52 @@
+.marquee {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 12px;
+    background: #F54932;
+    height: 60px;
+    align-items: center;
+}
+
+.marquee__content {
+    font-family: "Merriweather";
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24.2px;
+    flex-shrink: 0;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    min-width: 100%;
+    animation: scroll 20s linear infinite;
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
+}
+
+.marquee__item {
+    padding-right: 12px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 12px));
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .marquee {
+        height: 38px;
+    }
+    .marquee__content {
+        font-size: 16px;
+        line-height: 17.6px;
+    }
+}
