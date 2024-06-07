@@ -1,0 +1,35 @@
+@import "./styles//header.css";
+@import "./styles/marquee.css";
+@import "./styles/mainSupportThink.css";
+@import "./styles/mainPlayers.css";
+@import "./styles/mainSteps.css";
+@import "./styles/footer.css";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+body {
+    max-width: 1222px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #313131;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: "Golos text";
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 72px;
+}
+
+@media screen and (max-width: 990px) {
+    .container {
+        padding: 0 20px;
+        align-items: center;
+    }
+}

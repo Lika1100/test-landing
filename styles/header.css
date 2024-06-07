@@ -1,0 +1,108 @@
+.header {
+    display: flex;
+    min-height: 700px;
+    background-image: url(./images/headerImg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__logo {
+    padding-top: 26px;
+}
+
+.header__content {
+    max-width: 542px;
+    padding-top: 62px;
+}
+
+.header__title {
+    font-family: 'Merriweather';
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 66px;
+}
+
+.header__title_position {
+    text-align: center;
+}
+
+.header__desc {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23.4px;
+    text-align: center;
+}
+
+.header__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+}
+
+.header__button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20.5px;
+    text-align: center;
+    padding: 20px;
+    height: 72px;
+    width: 263px;
+    border-radius: 66px;
+    background-color: #1F1F1F;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #1F1F1F;
+}
+
+.header__button_light {
+    background-color: transparent;
+    color: #313131;
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        max-width: 700px;
+        width: 100%;
+        min-height: 812px;
+        background-position: 50%;
+        position: relative;
+    }
+    .header__content {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__title {
+        font-size: 36px;
+        line-height: 39.6px;
+    }
+
+    .header__buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .header__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 335px;
+        padding: 18px 20px;
+        height: 47px;
+    }
+
+    .header__button_light {
+        background-color: white;
+        opacity: 0.9;
+        border: 1px solid transparent;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .header {
+        background-image: url('./images/headerImgMob.png');
+        background-color: rgba(233, 222, 212, 0.6);
+        background-blend-mode: color-burn;
+    }
+}

@@ -1,0 +1,120 @@
+.main__players {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.main__carousel {
+    max-width: 1222px;
+    width: 100%;
+}
+
+#next {
+    margin-left: 14px;
+}
+
+#prev {
+    margin-right: 14px;
+}
+
+.main__cards {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 3);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: 0;
+    padding-bottom: 176px;
+}
+
+.main__cards::-webkit-scrollbar {
+    display: none;
+}
+
+.dragging {
+    cursor: grab;
+    user-select: none;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.no-transition {
+    scroll-behavior: auto;
+}
+
+.main__card {
+    scroll-snap-align: start;
+    padding: 0 12px;
+    max-width: 394px;
+    min-height: 462px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__cardTitle {
+    padding-top: 28px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28.8px;
+}
+
+.main__cardDesc {
+    padding-top: 6px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    opacity: 0.6;
+}
+
+.main__cardButton {
+    border: 1px solid #3057A2;
+    color: #3057A2;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.2px;
+    border-radius: 62px;
+    padding: 12px;
+}
+
+.main__playersToggle {
+    display: flex;
+    align-items: center;
+}
+
+.main__playersTitle {
+    padding-bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__playersTitle h2 {
+    margin: 0;
+}
+@media screen and (max-width: 990px) {
+    .main__players {
+        padding-bottom: 40px;
+    }
+    .main__playersToggle {
+        position: absolute;
+        bottom: -600px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99;
+    }
+    .main__cards {
+        position: relative;
+        grid-auto-columns: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main__cards {
+        grid-auto-columns: 100%;
+    }
+}
